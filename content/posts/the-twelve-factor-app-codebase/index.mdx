@@ -1,0 +1,46 @@
+---
+title: "The Twelve-Factor App: Codebase"
+date: 2023-12-21
+description:
+tags:
+  - Dev
+  - Architecture pattern
+  - English
+banner:
+---
+
+### One codebase tracked in revision control, many deploys
+
+---
+
+A codebase refers to the main code definition that serves as shared code among
+developers for ongoing feature development. Typically, a codebase is stored in a
+code repository managed by a version control system like `Git`, `Mercurial`,
+or `Subversion`.
+
+The codebase is a single repository or any set of repositories that share a root
+commit.
+
+There exists a one-to-one correlation between the codebase and the app:
+
+* If there are multiple codebases, it does not qualify as a single codebase but
+rather constitutes a distributed system. Each component in a distributed system
+is considered an app, and each can individually adhere to the
+Twelve-Factor principles.
+* Having multiple apps sharing the same codebase violates the Twelve-Factor approach.
+The recommended solution is to modularize shared code into libraries that can be
+included through the dependency manager.
+
+Per app, there exists only one codebase, but numerous deployments of the app can
+exist. A deployment refers to a running instance of the app, which commonly
+includes instances in production, staging, testing, and an additional local
+instance for each developer.
+
+While the codebase remains consistent across all these environments, there might
+be different active versions in each environment due to ongoing feature
+development during the development cycle.
+
+_This Twelve-Factor App post series is a means for me to consolidate the knowledge
+I've gained while studying these rules. Please feel free to visit 
+[the site](https://12factor.net/pt_br/) for more detailed explanations.
+That's all folks!_
