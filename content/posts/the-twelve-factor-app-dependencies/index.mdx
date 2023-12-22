@@ -1,0 +1,47 @@
+---
+title: "The Twelve-Factor App: Dependencies"
+date: 2023-12-22
+description:
+tags:
+  - Dev
+  - Architecture pattern
+  - The Twelve-Factor App
+  - English
+banner:
+---
+
+### Explicitly declare and isolate dependencies
+
+---
+
+Most programming languages have their designated platforms for sharing and
+posting system packages. For instance, Ruby utilizes `Rubygems`.
+
+Each library can be installed through what we refer to as "site packages,"
+which serve system-wide, or by explicitly declaring them within our app's scope,
+a practice known as "vendoring."
+
+**The Twelve-Factor methodology does not rely on the implicit existence of
+system-wide packages.** Instead, dependencies should be declared within our 
+application via a declaration manifest. Additionally, it employs dependency
+isolation tools during execution to prevent any implicit dependencies from
+seeping in from the surrounding system. For instance, Ruby employs the
+`Gemfile` manifest format for dependency declaration and `bundle exec`
+for dependency isolation.
+
+Explicitly declaring dependencies brings the benefit of simplifying setup for
+new developers joining the app. A new developer can clone the app's codebase
+onto their local machine, needing only the language runtime and the installed
+dependency manager as prerequisites. Consequently, they can set up everything
+required with a single command, such as `bundle install` for Ruby/Bundler.
+
+**The Twelve-Factor methodology also does not rely on the implicit existence of
+system tools** like `curl` or `ImageMagick`, for example. Even though these tools
+may be prevalent in many systems, there's no assurance that they will exist on
+all systems where the app may run in the future, or that they will be compatible
+with the app. All of those should be "vendored" into the app.
+
+_This Twelve-Factor App post series is a means for me to consolidate the knowledge
+I've gained while studying these rules. Please feel free to visit 
+[the site](https://12factor.net/pt_br/) for more detailed explanations.
+That's all folks!_
