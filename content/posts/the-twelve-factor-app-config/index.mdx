@@ -1,0 +1,63 @@
+---
+title: "The Twelve-Factor App: Config"
+date: 2023-12-23
+description:
+tags:
+  - Dev
+  - Architecture pattern
+  - The Twelve-Factor App
+  - English
+banner:
+---
+
+### Keep your configs for each environment
+
+---
+
+The app's configuration is everything that may vary between environments. This includes:
+
+* System resources like databases, Memcached, and backing services;
+* Credentials for external services such as Amazon S3 or Twitter;
+* Environment-specific values such as the hostname.
+
+The Twelve-Factor methodology strongly advocates for
+separating configuration from the code. This is primarily
+because configuration values may differ between environments
+while the code remains constant. A useful way to determine if
+configurations are properly extracted from the code is by
+considering the scenario of making the codebase open source.
+If the credentials need to be managed, the configurations
+might be compromised.
+
+Another approach involves using configuration files not
+included in the version control system, such as
+'config/database.yml' in Rails. While this is a significant
+improvement, it is not recommended because there's a risk of
+accidentally pushing these files. Additionally, configuration
+files often scatter across different locations, making
+maintenance challenging. Moreover, these config files tend to
+be specific to a particular language or framework.
+
+Another practice to avoid is grouping configurations into
+environment-specific sets. Apps tend to categorize
+configurations into named groups for different environments.
+However, this method doesn't scale well. As the project
+expands, developers might introduce their own custom
+environments, leading to an explosion of configurations that
+complicate deployment management.
+
+**The Twelve-Factor methodology suggests storing
+configurations in environment variables.** Environment
+variables are easy to modify between deployments without
+requiring changes to the code. They compel setting up
+independent configurations for each deployment environment,
+minimizing the chance of accidental check in the codebase
+repository. They don't aggregate into 'environments' groups,
+they are language- and OS-agnostic standards and provide a
+scalable model as the app naturally expands to more
+deployments.
+
+_This Twelve-Factor App post series is a means for me to consolidate
+the knowledge I've gained while studying these rules. Please feel free to visit 
+[the site](https://12factor.net/pt_br/) for more detailed explanations.
+That's all folks!_
