@@ -1,0 +1,37 @@
+---
+title: "The Twelve-Factor App: Backing Services"
+date: 2023-12-23
+description:
+tags:
+  - Dev
+  - Architecture pattern
+  - The Twelve-Factor App
+  - English
+banner:
+---
+
+### Treat backing services as attached resources
+
+---
+
+Backing services are classified as any resources required by the app to fulfill
+its functionalities. Typically accessed via a network or other locations stored
+within the configuration. These services include databases, SMTP clients,
+third-party integrations such as `Amazon S3`, `Twitter`, or `Last.fm` APIs,
+and caching systems. These backing services are usually managed by the
+individual responsible for deploying the app and its resources.
+
+**The Twelve-factor app doesn't differentiate between local and third-party
+services.** For the app, both types of resources are accessed via URLs. Thus,
+swapping out a local resource, like a database, for one managed by a third party
+requires no code changes.
+
+Resources can be attached to or detached from deployments at will. For instance,
+if a database malfunctions, the app's administrator might spin up a new database
+backup, detach the current database, and then restore the new database instance
+by requiring no code alterations.
+
+_This Twelve-Factor App post series is a means for me to consolidate
+the knowledge I've gained while studying these rules. Please feel free to visit 
+[the site](https://12factor.net/) for more detailed explanations.
+That's all folks!_
