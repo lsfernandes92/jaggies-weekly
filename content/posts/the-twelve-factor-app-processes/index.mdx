@@ -1,0 +1,48 @@
+---
+title: "The Twelve-Factor App: Processes"
+date: 2023-12-28
+description:
+tags:
+  - Dev
+  - Architecture pattern
+  - The Twelve-Factor App
+  - English
+banner:
+---
+
+### Execute the app as one or more stateless processes
+
+---
+
+The app operates within the execution environment as one or more processes.
+
+Consider the code as a stand-alone script, the execution environment as the
+developer's local machine with the installed language runtime, and the process
+launched via the command line, for example, `$ ruby my_file.rb`.
+
+**The Twelve-factor app dictates that processes should be stateless and share
+nothing.** Any additional data requiring persistence must be stored in a backing
+service, typically a database.
+
+However, the memory space or filesystem of the process can be utilized as a
+brief, single-transaction cache. For instance, downloading a large file,
+performing operations on it, and then storing the results of the operation in
+the database. Nonetheless, the Twelve-Factor app never assumes that anything
+cached in memory or on disk will be available for future requests or jobs, as
+future requests might be served by different processes.
+
+Moreover, any language-specific packaging that utilizes the filesystem as a
+cache for compiled assets violates the Twelve Factor app. It is preferred to
+handle this during compilation in the build stage. _Tip: The Rails asset
+pipeline can be configured to package assets during the build stage._
+
+Certain web systems rely on "sticky sessions" where user session data is
+cached in the memory of the app’s process, expecting subsequent requests from
+the same visitor to be routed to the same process. This practice also violates
+the Twelve-Factor app. Session state data is better suited for a datastore
+offering time expiration, such as Memcached or Redis.
+
+_This Twelve-Factor App post series is a means for me to consolidate
+the knowledge I've gained while studying these rules. Please feel free to visit 
+[the site](https://12factor.net/) for more detailed explanations.
+That's all folks!_
