@@ -1,0 +1,53 @@
+---
+title: "The Twelve-Factor App: Dev/prod parity"
+date: 2024-01-04
+description:
+tags:
+  - Dev
+  - Architecture pattern
+  - The Twelve-Factor App
+  - English
+banner:
+---
+
+### Keep development, staging, and production as similar as possible
+
+---
+
+Historically, significant disparities have existed between development and
+production environments, manifesting in several ways:
+
+- The Time Gap: Code often takes days, weeks, or even months to reach
+production, whereas it should ideally be deployed within hours or minutes.
+- The Personnel Gap: Developers create code while DevOps engineers handle
+deployment. Ideally, developers would be closely engaged in deploying and
+observing its behavior in the production environment.
+- The Tools Gap: Local development setups might utilize stacks like `Nginx`,
+`SQLite`, and OS X, while production environments employ `Apache`, `MySQL`, and
+Linux. Let's keep development and production as similar as possible.
+
+**The Twelve-Factor app is engineered for continuous deployment, aiming to
+narrow the gap between these environments.**
+
+Developers adhering to **the twelve-factor principles resist the temptation to
+use different backing services in development versus production.** This stems
+from the appeal developers find in using lightweight services locally versus
+more robust ones in production. Discrepancies between these services often lead
+to minor incompatibilities, causing code that passed testing in dev or staging
+to fail in production. This discourages continuous deployment and results in
+considerable friction that incurs significant costs throughout an application's
+lifecycle. Additionally, modern packaging systems like `Homebrew` and `apt-get`
+have made installing and running modern backing services less challenging.
+
+Many programming languages offer libraries that streamline access to backing
+services, providing adapters for various service types. For instance,
+`ActiveRecord` for `Ruby/Rails` includes database adapters such as `MySQL`,
+`PostgreSQL`, and `SQLite`. While adapters to different backing services
+simplify porting to new services, it's essential for all deployments (developer
+environments, staging, production) to use the same type and version of each
+backing service.
+
+_This Twelve-Factor App post series is a means for me to consolidate
+the knowledge I've gained while studying these rules. Please feel free to visit 
+[the site](https://12factor.net/) for more detailed explanations.
+That's all folks!_
