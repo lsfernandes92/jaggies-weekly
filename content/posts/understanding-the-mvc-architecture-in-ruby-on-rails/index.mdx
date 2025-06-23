@@ -1,0 +1,154 @@
+---
+title: "MVC: The Linchpin Architecture of Ruby on Rails"
+date: 2024-04-09
+description:
+tags:
+  - dev
+  - architecture
+  - the-twelve-factor-app
+  - english
+banner:
+---
+
+When it comes to web development, knowing your architectural patterns is key to
+building solid and easy-to-maintain apps. And one of the stars in the Ruby on
+Rails world is MVC—which stands for Model-View-Controller. So, let's cover some
+key points on what MVC is and how it plays a big role in Rails development.
+
+---
+
+## Explaining MVC in Ruby on Rails
+
+In Rails, you get the MVC model right out of the box, embodying the [convention
+over configuration principle](https://rubyonrails.org/doctrine#convention-over-configuration)
+that Rails is known for. It's like having a roadmap that tells you where to go
+without sweating the small stuff. This setup helps devs concentrate on the fun
+stuff—like cooking up new features—instead of struggling with naming and
+organizing files within the project.
+
+## Basic Web Request Flow in Rails MVC
+
+For knowledge purposes, understanding how a simple web request moves through the
+MVC can make things clearer. Here's a simple breakdown of how it works:
+
+1. A user sends a request to the web server
+2. The web server gets the request and passes it to the controller
+3. The request is then directed to its specific route, like `/grocery`. The
+route connects with the controller method that handles this request
+4. The controller talks to the model to get the needed data from the database.
+It then processes this data based on the app's logic
+5. Once the data is validated, it's prepared to be shown in the view
+6. The data is sent to the view for display, usually in an HTML file like 
+`index.html` or `index.html.erb`
+7. The view processes the data and creates a response to send back to the
+webserver
+8. This response, along with any JSON data, is then sent back to the user's
+browser
+
+## The Model
+
+The Model in MVC is like the brain of the operation. It's where your business
+logic resides and where all the smarts and data magic happen in your app. In a 
+nutshell, here's what you need to know about the Model:
+
+* It encapsulates data-related business logic
+* Each Model corresponds to a table in the database
+* While the Model class name is by convention in singular, its equivalent table 
+name in the database is plural
+* It inherits from `ActiveRecord::Base` which brings some facilities, such as:
+  - Establish and maintain a connection with the database
+  - Enable data retrieval from the database
+  - Facilitate data writing to the database
+* `ActiveRecord::Base` provides abstractions of database adapters to connect
+with a wide range of popular databases
+* It also makes it easy to define relationships or associations between models
+
+## The View
+
+The View part handles how users interact with the app and how things look on the
+screen. Here's what you need to know about it:
+
+* It deals with how things look and how you interact with the browser
+* It's not for handling business stuff or talking to databases
+* It's purpose is only for object representation
+* It mixes HTML and Ruby code using special tags like `<%= %>` and `<% %>`
+* The instantiation of this class is done under the hood by the `ActionView` 
+module
+* The Rails developer only needs to modify the templates that resides on 
+`app/views`
+* The folder that stores the template file is named after the controller action
+name. For eg., `index.html.erb`, or `show.html.erb`
+* The template has a one-to-one mapping to the controller action
+* The extension of the template can be:
+    - `html.erb`
+    - `xml.builder`
+    - `json.builder`
+* It comes with special templates such as layouts and partials
+    - Layouts: are templates that control the global layout of the application and
+    are things that might not change, such as the nav bar
+    - Partials: are special subtemplates that can be reused multiple times
+    within the application
+* Communication between controllers and views is made via instance variables
+* All of this is done as part of the `ActionPack` lib
+
+## The Controller
+
+The Controller acts as the intermediary between the Model and the View,
+handling requests and coordinating data flow. Key aspects of the Controller
+include:
+
+* It's the interface that glues the logic that resides in the Model classes and
+display them into pages that the final user can view. This is done with:
+  1. Figuring out what to do when a user makes a request
+  2. Getting data from the Model and sending it to the View to show to the user
+  3. Gathering info from a browser request and use to create or update a model
+* It's inherits from `application_controller.rb` that inherits from 
+`ActionController::Base`
+* Controller class names use CamelCase
+* File names are lowercase with underscores, ending in `_controller.rb`
+* Each controller handles a specific part of the app
+* Controllers have instance methods that match up with create, read, update, 
+and delete (CRUD) actions
+
+## Pros and Cons of MVC in Rails
+
+### Pros
+
+* **Scalability**: MVC promotes a structured approach that scales well with growing
+applications
+* **Maintainability**: Separation of concerns makes code easier to maintain and
+update
+* **Reusability**: Components like views and partials can be reused across the
+application
+
+
+### Cons
+
+* **Complexity**: There are some magic things that happen behind the scenes that, 
+at first sight, might be confusing, especially for new developers
+* **Partial Knowledge**: While MVC is essential, it's part of a larger application
+architecture, and understanding other design patterns is beneficial
+
+
+## Conclusion
+
+MVC in Ruby on Rails is a common approach used in many projects, and
+understanding it is crucial if you want to work on Rails projects.
+This architecture follows certain conventions that help developers focus on
+important tasks and take advantage of built-in methods and tools provided by the
+framework. While Rails apps aren't solely based on MVC, from my experience point
+of view, knowing other design patterns also helps in building software
+effectively with MVC.
+
+_As you can see, this post doesn't cover all the details of this design pattern.
+The goal here is to provide some guidance and key points to focus on. Hopefully,
+this gives you a starting point to learn more about the subject, just like it
+did for me._
+
+For further reading and references, check out the following links:
+
+* [Sitepoint's MVC Architecture in Rails](https://www.sitepoint.com/model-view-controller-mvc-architecture-rails/)
+* [Ruby on Rails Official Documentation](https://rubyonrails.org/)
+
+
+Thank you for reading!
