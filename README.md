@@ -62,7 +62,17 @@ npx gatsby new gatsby-starter-minimal-blog https://github.com/LekoArts/gatsby-st
 cd gatsby-starter-minimal-blog
 ```
 
-### 3. **Open the code and start customizing!**
+### 3. Use the right Node version
+
+Gatsby (especially Gatsby v5) tends to play nicer with **Node 18.x LTS** or **Node 20.x LST**. Make sure you're using one of these versions.
+
+```sh
+nvm install 20
+nvm use 20
+node -v
+```
+
+### 4. **Open the code and start customizing!**
 
 Start the site by running `npm run develop`.
 

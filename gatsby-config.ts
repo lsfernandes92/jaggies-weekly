@@ -8,14 +8,14 @@ const config: GatsbyConfig = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
-    siteTitle: `Minimal Blog`,
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+    siteTitle: `Jaggies Weekly`,
+    siteTitleAlt: `Jaggies Weekly`,
+    siteHeadline: `Jaggies Weekly`,
+    siteUrl: `https://jaggies-weekly.netlify.app/`,
+    siteDescription: `A programming and drawing blog by @lsfernandes92, where he shares his recent discoveries, experiments, and projects in the world of coding, digital art and beyond.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    author: `@lsfernandes92`,
   },
   trailingSlash: `always`,
   plugins: [
@@ -35,12 +35,20 @@ const config: GatsbyConfig = {
         ],
         externalLinks: [
           {
-            name: `Bluesky`,
-            url: `https://bsky.app/profile/lekoarts.de`,
+            name: `Mastodon`,
+            url: `https://ruby.social/@jaggiesweekly`,
           },
           {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
+            name: `Bluesky`,
+            url: `https://bsky.app/profile/jaggiesweekly.bsky.social`,
+          },
+          {
+            name: `Github`,
+            url: `https://github.com/lsfernandes92`,
+          },
+          {
+            name: `LinkedIn`,
+            url: `https://www.linkedin.com/in/lsfernandes92/`,
           },
         ],
       },
