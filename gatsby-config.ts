@@ -47,6 +47,10 @@ const config: GatsbyConfig = {
             url: `https://github.com/lsfernandes92`,
           },
           {
+            name: `Ko-fi`,
+            url: `https://ko-fi.com/jaggiesweekly`,
+          },
+          {
             name: `LinkedIn`,
             url: `https://www.linkedin.com/in/lsfernandes92/`,
           },
