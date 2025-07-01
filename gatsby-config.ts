@@ -33,16 +33,7 @@ const config: GatsbyConfig = {
             slug: `/about`,
           },
         ],
-        externalLinks: [
-          {
-            name: `Bluesky`,
-            url: `https://bsky.app/profile/lekoarts.de`,
-          },
-          {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
-          },
-        ],
+        externalLinks: [],
       },
     },
     {
