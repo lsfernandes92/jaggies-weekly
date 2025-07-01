@@ -33,28 +33,7 @@ const config: GatsbyConfig = {
             slug: `/about`,
           },
         ],
-        externalLinks: [
-          {
-            name: `Mastodon`,
-            url: `https://ruby.social/@jaggiesweekly`,
-          },
-          {
-            name: `Bluesky`,
-            url: `https://bsky.app/profile/jaggiesweekly.bsky.social`,
-          },
-          {
-            name: `Github`,
-            url: `https://github.com/lsfernandes92`,
-          },
-          {
-            name: `Ko-fi`,
-            url: `https://ko-fi.com/jaggiesweekly`,
-          },
-          {
-            name: `LinkedIn`,
-            url: `https://www.linkedin.com/in/lsfernandes92/`,
-          },
-        ],
+        externalLinks: [],
       },
     },
     {
