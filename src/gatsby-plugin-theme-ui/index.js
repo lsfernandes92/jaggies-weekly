@@ -10,8 +10,12 @@ const theme = {
     },
   },
   layout: {
+    ...baseTheme.layout,
     container: {
-      maxWidth: "700px"
+      ...baseTheme.layout?.container,
+      maxWidth: "700px",
+      mx: "auto",      // center horizontally
+      px: [3, 4],
     },
   },
 }
