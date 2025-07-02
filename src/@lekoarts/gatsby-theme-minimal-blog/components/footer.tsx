@@ -12,10 +12,13 @@ const Footer = () => (
       color: `secondary`,
       a: {
         variant: `links.secondary`,
+        "@media (max-width: 470px)": {
+          textDecoration: `underline`,
+        },
       },
       flexDirection: [`column`, `row`],
       variant: `dividers.top`,
-      fontSize: ["1em", "1.1em"],
+      fontSize: ["1.2em"],
     }}
   >
     <div>
