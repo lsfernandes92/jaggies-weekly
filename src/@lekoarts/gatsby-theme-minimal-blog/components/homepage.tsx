@@ -32,13 +32,13 @@ const Homepage = ({ posts }: MBHomepageProps) => {
   return (
     <Layout>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
-      <section sx={{ mb: [1, 2], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
+      <section sx={{ mb: [1, 2], p: { fontSize: [2, 3, 3], mt: 2 }, variant: `section_hero` }}>
         <Hero />
       </section>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Text
           children={`Latest posts `}
-          sx={{ fontSize: [2, 3, 4], fontWeight: `bold`, color: `heading` }}
+          sx={{ fontSize: ["1.875rem"], fontWeight: `bold`, color: `heading` }}
         />
         <Link
           sx={(t) => ({ ...t.styles?.a, variant: `links.secondary`, marginY: 2 })} 
