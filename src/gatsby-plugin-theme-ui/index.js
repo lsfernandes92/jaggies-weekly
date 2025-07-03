@@ -24,18 +24,23 @@ const theme = {
       ...baseTheme.styles?.ul,
       li: {
         ...baseTheme.styles?.ul?.li,
-        fontSize: ["1.25em"],
+        fontSize: ["1.25rem"],
       },
     },
     ol: {
       ...baseTheme.styles?.ol,
       li: {
         ...baseTheme.styles?.ol?.li,
-        fontSize: ["1.25em"],
+        fontSize: ["1.25rem"],
       },
     },
-    h1: { ...baseTheme.styles?.h1, fontWeight: "heading", },
-    h2: { ...baseTheme.styles?.h2, fontWeight: "heading", fontSize: ["2.25rem"]},
+    blockquote: {
+      ...baseTheme.styles?.blockquote,
+      borderLeftColor: `secondary`,
+      borderLeftWidth: `3px`,
+    },
+    h1: { ...baseTheme.styles?.h1, fontWeight: "heading", fontSize: ["2.5rem"] },
+    h2: { ...baseTheme.styles?.h2, fontWeight: "heading", fontSize: ["2rem"]},
     h3: { ...baseTheme.styles?.h3, fontWeight: "heading", fontSize: ["1.25rem"] },
     h4: { ...baseTheme.styles?.h4, fontWeight: "heading" },
     h5: { ...baseTheme.styles?.h5, fontWeight: "heading" },
