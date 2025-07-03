@@ -60,6 +60,10 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({ data:
             borderRadius: `4px`,
           },
         },
+        a: {
+          color: `text`,
+          textDecoration: "underline",
+        },
         variant: `layout.content`,
       }}
     >

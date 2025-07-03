@@ -28,7 +28,7 @@ const Blog = ({ posts }: MBBlogProps) => {
   return (
     <Layout>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
-        <Heading as="h1" variant="styles.h1" sx={{ marginY: 3 }}>
+        <Heading as="h1" variant="styles.h1" sx={{ marginY: 4, fontSize: ["2.5rem"] }}>
           Blog
         </Heading>
         <Link
