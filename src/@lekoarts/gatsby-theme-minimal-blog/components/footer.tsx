@@ -48,6 +48,14 @@ const Footer = () => (
       </a>
       {", "}
       <a
+        href="https://codeberg.org/lsfernandes92"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Codeberg
+      </a>
+      {", "}
+      <a
         href="https://buymeacoffee.com/jaggiesweekly"
         rel="noopener noreferrer"
         target="_blank"
