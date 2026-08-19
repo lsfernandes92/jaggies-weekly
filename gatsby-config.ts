@@ -8,10 +8,10 @@ const config: GatsbyConfig = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
-    siteTitle: `Jaggies Weekly`,
-    siteTitleAlt: `Jaggies Weekly`,
-    siteHeadline: `Jaggies Weekly`,
-    siteUrl: `https://jaggies-weekly.netlify.app/`,
+    siteTitle: `Foobar`,
+    siteTitleAlt: `Foobar`,
+    siteHeadline: `Foobar`,
+    siteUrl: `https://vulgofoobar.netlify.app/`,
     siteDescription: `A programming and drawing blog by @lsfernandes92, where he shares his recent discoveries, experiments, and projects in the world of coding, digital art and beyond.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
