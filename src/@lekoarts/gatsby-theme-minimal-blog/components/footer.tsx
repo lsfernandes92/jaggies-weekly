@@ -32,7 +32,7 @@ const Footer = () => (
       </a>
       {", "}
       <a
-        href="https://bsky.app/profile/jaggiesweekly.bsky.social"
+        href="https://bsky.app/profile/vulgofoobar.bsky.social"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -40,7 +40,7 @@ const Footer = () => (
       </a>
       {", "}
       <a
-        href="https://github.com/lsfernandes92"
+        href="https://github.com/vulgofoobar"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -48,7 +48,7 @@ const Footer = () => (
       </a>
       {", "}
       <a
-        href="https://codeberg.org/lsfernandes92"
+        href="https://codeberg.org/vulgofoobar"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -56,7 +56,7 @@ const Footer = () => (
       </a>
       {", "}
       <a
-        href="https://buymeacoffee.com/jaggiesweekly"
+        href="https://buymeacoffee.com/vulgofoobar"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -64,7 +64,7 @@ const Footer = () => (
       </a>
       {", "}
       <a
-        href="https://ko-fi.com/jaggiesweekly"
+        href="https://ko-fi.com/vulgofoobar"
         rel="noopener noreferrer"
         target="_blank"
       >
